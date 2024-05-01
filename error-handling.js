@@ -7,14 +7,36 @@ function sum(array) {
   return sum;
 }
 
-let res = sum(null);
-console.log(res);
+try {
+
+  let res = sum(null);
+
+console.log(res); } catch (error) {
+
+  console.error(`TypeError: Cannot read properties of null (reading 'length')`)
+}
+
+console.log('Hello my friend');
 
 // 2.
 // tests
-sayName("Alex");
-sayName(1);
-// Your code here 
+try {
+
+  sayName("Alex");
+
+  sayName(1); } catch(error) {
+
+    console.error(error.name + " " + error.message);
+
+  }
+// Your code here
+const sayName = name => {
+
+  if(name !== typeof 'string') {
+
+    throw Error('Invalid name! Must be a string!!')
+  }
+}
 
 // 3.
 function greet(greeting) {
@@ -25,3 +47,13 @@ function greet(greeting) {
   console.log(greeting);
 }
 
+
+
+try {
+
+  greet()
+} catch(error) {
+
+  console.log('Hello World');
+
+}
