@@ -22,3 +22,4 @@ Implement the following in the __error-handling.js__ file.
 3. Come up with a test case that will cause the `greeting` function to throw
    the `Error`. When an error is thrown from that test case, catch it and print
    out "Hello World!"
+# aa04-error-handling
